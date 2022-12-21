@@ -64,16 +64,6 @@ class _MyAppState extends State<MyApp> {
                   secondChild: Player(),
               ),
         )
-        /*
-        child: ValueListenableBuilder<bool>(
-          valueListenable: ,
-          builder: (_, value, __) {
-            return AnimatedSwitcher(
-                duration: const Duration(milliseconds: 500),
-                child: ? Player() : Splash()
-            );
-          }
-        ),*/
       );
   }
 }

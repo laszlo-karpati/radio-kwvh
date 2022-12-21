@@ -146,7 +146,7 @@ class _PlayerState extends State<Player> {
 
                               //use timer for the smoother sliding
                               timer = Timer(Duration(milliseconds: 200), () {
-                                VolumeController().setVolume(newVolume);
+                                VolumeController().setVolume(newVolume, showSystemUI: false);
                               });
 
                               print("new volume: ${newVolume}");
@@ -158,7 +158,6 @@ class _PlayerState extends State<Player> {
                           );
                         })
                     ),
-
                     SvgPicture.asset('assets/svg/volume_up.svg'),
                   ],)
                 ],
