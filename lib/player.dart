@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:radio_kwvh/widgets/player/visualize.dart';
 import '/notifiers/play_button_notifier.dart';
 import '/player_manager.dart';
 import '/services/service_locator.dart';
@@ -79,11 +80,11 @@ class _PlayerState extends State<Player> {
                                 fontWeight: FontWeight.w400,
                                 fontSize: ScreenUtil().setSp(55),
                                 decoration: TextDecoration.none,
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
-                      ),
                       SizedBox(height: 80.h),
                       ValueListenableBuilder<ButtonState>(
                         valueListenable: playerManager.playButtonNotifier,
@@ -122,6 +123,8 @@ class _PlayerState extends State<Player> {
                           }
                         },
                       ),
+                      SizedBox(height: 350.h),
+                      Visualize(),
                     ],
                   )),
               Column(
